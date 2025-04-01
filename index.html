@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>The Library</h1>
+        <button class="addBook" onclick="openForm()">Add Book</button>
+    </header>
+    <div id="libDisplay">
+    </div>
+    <div id="overlay">
+
+    </div>
+    <div class="form-popup">
+        <form id="book-form" onsubmit="submitBook(event)">
+            <div class="formElement">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div class="formElement">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author">
+            </div>
+            <div class="formElement">
+                <label for="pages">Pages</label>
+                <input type="text" name="pages" id="pages">
+            </div>
+            <div class="formElement">
+                <label for="status">Status</label>
+                <select name="status" id="status">
+                    <option value="read">Read</option>
+                    <option value="notRead">Not yet read</option>
+                </select>
+                <button type="submit">Submit</button>
+                <button type="button" class="cancel-button" onclick="closeForm()">Close</button>
+            </div>
+        </form>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
